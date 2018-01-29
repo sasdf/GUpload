@@ -23,9 +23,6 @@ location.search.slice(1).split('&').forEach(e => {
   if (e.slice(0, 6) === 'state=')
     queryState = JSON.parse(decodeURIComponent(e.slice(6)))
 })
-if (!queryState.folderId) {
-  location.href = baseURL
-}
 
 class _Auth {
   constructor() {
@@ -86,6 +83,9 @@ class _Auth {
     const res = this.handleResult(hash)
     if (res) {
       queryState = res.state
+    }
+    if (!queryState.folderId) {
+      location.href = baseURL
     }
     return res
   }
