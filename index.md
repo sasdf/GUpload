@@ -10,8 +10,6 @@ GUpload is a google drive add-on for creating upload link where the generated li
 
 After adding to Drive, you can create links from New Menu.
 ![Menu](/assets/menu.png)
-![New](/assets/new.png)
-![Result](/assets/result.png)
 
 Then upload by a `PUT` request to the link. For example, uploading by `curl`:
 ```bash
