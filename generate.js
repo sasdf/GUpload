@@ -6,7 +6,7 @@ const clientId = "141962813513-bsr1ggi5gcgflu83u9nq22frihh5cda3.apps.googleuserc
 
 // Scope to use to access user's Drive items.
 const scope = [
-  'https://www.googleapis.com/auth/drive',
+  'https://www.googleapis.com/auth/drive.file',
   'https://www.googleapis.com/auth/drive.install'
 ];
 
