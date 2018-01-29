@@ -15,7 +15,7 @@ Then upload by a `PUT` request to the link. For example, uploading by `curl`:
 ```bash
 curl -X PUT "$URL" --upload-file file.txt
 ```
-you can use any tools you like to upload.
+You can use any tools you like to upload.
 
 The file will show up after uploading is done.
 
