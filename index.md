@@ -4,12 +4,24 @@ redirect_from:
 ---
 ## Introduction
 
-GUpload is a google drive add-on for creating upload link where the generated link doesn't need login credentials to work. For example, you can generate a link on your own PC, and then use the link for upload on other machine without exposing your login cred.
-
-### Installation
-[Add to Google Drive](https://accounts.google.com/o/oauth2/v2/auth?client_id=141962813513-bsr1ggi5gcgflu83u9nq22frihh5cda3.apps.googleusercontent.com&response_type=token&scope=https%3A%2F%2Fwww.googleapis.com%2Fauth%2Fdrive%20https%3A%2F%2Fwww.googleapis.com%2Fauth%2Fdrive.install&redirect_uri=https%3A%2F%2Fsasdf.cf%2FGUpload%2Fredirect)
+GUpload is a google drive add-on for creating upload link where the generated link doesn't need login credentials to work. For example, you can generate a link on your own PC, and then use the link for upload on other machine without exposing your login credentials.
 
 ### Usage
+
+After adding to Drive, you can create links from New Menu.
+![Menu](/assets/menu.png)
+![New](/assets/new.png)
+![Result](/assets/result.png)
+
+Then upload by a `PUT` request to the link. For example, uploading by `curl`:
+```bash
+curl -X PUT "$URL" --upload-file file.txt
 ```
-![Image](src)
-```
+you can use any tools you like to upload.
+
+The file will show up after uploading is done.
+
+> *Note*: Link expires after one week.
+
+### Additional Notes
+The API Docs guarantees that the link will work without additional login credentials, but it doesn't guarantee that the link won't contain sensitive information in the future. At the time of writing, the link only contains a long random identifier. Check the link before sending it to an untrusted place.
