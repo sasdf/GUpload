@@ -46,6 +46,7 @@ class _Auth {
       const immtoken = await this.immtoken
       if (immtoken) return immtoken
       this.trigger()
+      throw Promise.reject()
     })()
   }
 
@@ -171,7 +172,11 @@ class _Create {
     this.disable()
     const name = document.querySelector('.filename').value
     queryState.name = name
-    await Auth.token
+    try{
+      await Auth.token
+    } catch (e) {
+      return
+    }
     await Drive.load
     try{
       const url = await Drive.create({
