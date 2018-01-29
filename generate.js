@@ -46,7 +46,7 @@ class _Auth {
       const immtoken = await this.immtoken
       if (immtoken) return immtoken
       this.trigger()
-      throw Promise.reject()
+      throw Promise.reject('Not Login')
     })()
   }
 
