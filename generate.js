@@ -209,8 +209,13 @@ class _Create {
   }
 
   close() {
-    document.querySelector('.filename').value = ''
     document.querySelector('.createDialog').classList.add('hidden')
+  }
+  show() {
+    document.querySelector('.createDialog').classList.remove('hidden')
+    document.querySelector('.resultDialog').classList.add('hidden')
+    this.enable()
+    document.querySelector('.filename').focus()
   }
 }
 const Create = new _Create()
