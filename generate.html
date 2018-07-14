@@ -50,6 +50,10 @@
         display: table-cell;
         vertical-align: middle;
       }
+      .filenameForm{
+        margin: 0;
+        padding: 0;
+      }
       .graybg{
         background: rgba(0,0,0,0.4);
       }
@@ -79,19 +83,21 @@
   <body class=graybg>
     <a id="github" href="https://sasdf.cf/GUpload/">Source Code on Github</a>
     <div class="createDialog centerWrapper"><div class="centerWrapper2">
-      <div class="createPanel panel panel-default">
-        <div class="panel-heading">
-          <h3 class="panel-title">New Upload Link</h3>
+      <form class="filenameForm" onsubmit="Create.link()">
+        <div class="createPanel panel panel-default">
+          <div class="panel-heading">
+            <h3 class="panel-title">New Upload Link</h3>
+          </div>
+          <div class="panel-body">
+            Please enter a name for the new item:<br />
+            <br />
+            <input class="form-control filename" placeholder="Filename" onfocus="this.select()"></input>
+          </div>
+          <div class="panel-footer">
+            <input type="submit" class="btn btn-primary" value="Create"></input>
+          </div>
         </div>
-        <div class="panel-body">
-          Please enter a name for the new item:<br />
-          <br />
-          <input class="form-control filename" placeholder="Filename" onfocus="this.select()"></input>
-        </div>
-        <div class="panel-footer">
-          <button class="btn btn-primary" onclick="Create.link()">Create</button>
-        </div>
-      </div>
+      </form>
     </div></div>
     <div class="hidden resultDialog centerWrapper"><div class="centerWrapper2">
       <div class="resultPanel panel panel-default">
@@ -107,6 +113,9 @@
           <br />
           <br />
           For more information, see <a href="https://developers.google.com/drive/v3/web/resumable-upload">Drive API Docs</a>
+        </div>
+        <div class="panel-footer">
+          <button class="btn btn-primary" onclick="Create.show()">Back</button>
         </div>
       </div>
     </div></div>
