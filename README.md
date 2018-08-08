@@ -7,6 +7,9 @@ GUpload is a google drive add-on for creating upload link where the generated li
 
 See [Project Page](https://sasdf.cf/GUpload/) for more information.
 
+### Permission
+In order to create files in your google drive and connected as an addon, this application needs permission `drive.file` and `drive.install`.
+
 ### Usage
 
 After adding to Drive, you can create links from New Menu.
