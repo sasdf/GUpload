@@ -1,4 +1,4 @@
-const baseHost = 'sasdf.cf'
+const baseHost = 'sasdf.github.io'
 const baseURL = `https://${baseHost}/GUpload/`
 
 // The Client ID obtained from the Google API Console. Replace with your own Client ID.
