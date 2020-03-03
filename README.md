@@ -5,7 +5,7 @@ The API Docs guarantees that the link will work without additional plaintext log
 
 GUpload is a google drive add-on for creating upload link where the generated link doesn't need login credentials to work. For example, you can generate a link on your own PC, and then use the link to upload on other machine without exposing your login credentials.
 
-See [Project Page](https://sasdf.cf/GUpload/) for more information.
+See [Project Page](https://sasdf.github.io/GUpload/) for more information.
 
 ### Permission
 In order to create files in your google drive and connected as an addon, this application needs permission `drive.file` and `drive.install`.
